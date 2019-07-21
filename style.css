@@ -73,15 +73,15 @@ div.text {
 }
 
 
-#hello {
+#home {
     background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://images.unsplash.com/photo-1455612693675-112974d4880b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60.jpg');
 }
 
-#about {
+#aboutme {
     background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://cdn.cnn.com/cnnnext/dam/assets/150827142602-01-skyline-quiz-chicago-1-jpg.jpg');
 }
 
-#project {
+#projects {
 background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://cdn.vox-cdn.com/thumbor/LG8oFnaO9qfrmjzgaSMBDtHw-So=/0x0:5616x3159/1200x800/filters:focal(207x669:1105x1567)/cdn.vox-cdn.com/uploads/chorus_image/image/55024857/shutterstock_425351407.0.jpg');
 }
 
