@@ -1,8 +1,44 @@
 body {
     margin: 0;
     margin-top: 50px;
-    font-family: Roboto;
 }
+
+@font-face {
+  font-family: brandonBld;
+  src: url(Brandon_bld.otf);
+}
+div.font {
+  font-family: brandonBLD;
+}
+
+@font-face {
+  font-family: brandonIT;
+  src: url(Brandon_reg.otf);
+}
+
+div.font2 {
+  font-family: brandonIT;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto-light.ttf);
+}
+
+div.font3 {
+  font-family: Roboto;
+}
+
+
+@font-face {
+  font-family: Helvetica;
+  src: url(Helvetica.ttf);
+}
+
+div.font4 {
+  font-family: Helvetica;
+}
+
 
 header {
     display: flex;
@@ -49,7 +85,9 @@ section {
 }
 
 h1 {
-    font-size: 2.7em;
+    font-size: 2.9em;
+    line-height: 30px;
+
 }
 
 h2 {
@@ -60,6 +98,8 @@ h2 {
 header a{
     text-decoration: none;
     color: black;
+    font-family: Roboto;
+
 }
 
 div.text {
@@ -69,6 +109,8 @@ div.text {
     padding: 0px;
     margin: 0px;
     margin-right: 200px;
+    font-family: Roboto;
+
 }
 
 

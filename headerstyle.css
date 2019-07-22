@@ -40,5 +40,30 @@ header a{
     font-family: Roboto;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto-light.ttf);
+}
 
+div.font {
+  font-family: Roboto;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(Helvetica.ttf);
+}
+
+div.font2 {
+  font-family: Helvetica;
+}
+
+@font-face {
+  font-family: RobotoIT;
+  src: url(Roboto-Italic.ttf);
+}
+
+div.font3 {
+  font-family: RobotoIT;
+}
 
