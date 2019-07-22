@@ -4,31 +4,30 @@ body {
 }
 
 @font-face {
-  font-family: brandonBld;
-  src: url(Brandon_bld.otf);
+  font-family: OswaldM;
+  src: url(Oswald-Medium.ttf);
 }
 div.font {
-  font-family: brandonBLD;
+  font-family: OswaldM;
 }
 
 @font-face {
-  font-family: brandonIT;
-  src: url(Brandon_reg.otf);
+  font-family: OswaldL;
+  src: url(Oswald-Light.ttf);
 }
 
 div.font2 {
-  font-family: brandonIT;
+  font-family: OswaldL;
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url(Roboto-light.ttf);
+  font-family: Merriweather;
+  src: url(Merriweather-Light.otf);
 }
 
 div.font3 {
-  font-family: Roboto;
+  font-family: Merriweather;
 }
-
 
 @font-face {
   font-family: Helvetica;
@@ -37,6 +36,15 @@ div.font3 {
 
 div.font4 {
   font-family: Helvetica;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto-light.ttf);
+}
+
+div.font5 {
+  font-family: Roboto;
 }
 
 
@@ -49,7 +57,7 @@ header {
     height: 50px;
     line-height: 50px;
     background-color: #eee;
-    font-size: 1.1em;
+    font-size: 1em;
 
 }
 
@@ -100,7 +108,7 @@ h2 {
 header a{
     text-decoration: none;
     color: black;
-    font-family: Roboto;
+    font-family: Merriweather;
 
 }
 
@@ -111,7 +119,7 @@ div.text {
     padding: 0px;
     margin: 0px;
     margin-right: 200px;
-    font-family: Roboto;
+    font-family: Merriweather;
 
 }
 

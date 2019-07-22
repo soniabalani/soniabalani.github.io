@@ -17,7 +17,7 @@ header {
     height: 50px;
     line-height: 50px;
     background-color: #eee;
-    font-size: 1.1em;
+    font-size: 1em;
 
 }
 
@@ -37,16 +37,16 @@ header a{
     margin: 0;
     margin-top: 50px;
     margin-left: 20px;
-    font-family: Roboto;
+    font-family: Merriweather;
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url(Roboto-light.ttf);
+  font-family: Merriweather;
+  src: url(Merriweather-Light.otf);
 }
 
 div.font {
-  font-family: Roboto;
+  font-family: Merriweather;
 }
 
 @font-face {
@@ -59,11 +59,30 @@ div.font2 {
 }
 
 @font-face {
+  font-family: MerriweatherIT;
+  src: url(Merriweather-Italic.otf);
+}
+
+div.font3 {
+  font-family: MerriweatherIT;
+}
+
+/* NOT BEING USED */
+@font-face4 {
+  font-family: Roboto;
+  src: url(Roboto-light.ttf);
+}
+
+div.font4 {
+  font-family: Roboto;
+}
+
+@font-face {
   font-family: RobotoIT;
   src: url(Roboto-Italic.ttf);
 }
 
-div.font3 {
+div.font5 {
   font-family: RobotoIT;
 }
 
