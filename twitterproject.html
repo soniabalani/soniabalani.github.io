@@ -33,72 +33,72 @@
 <center> 
 <h3 style="font-size: 1.7em; margin-top: 1em;"> Tweeting Drives the Stock Market ft. Elon Musk and Tesla </h3> <center> </br>
     <div class="container-fluid">
-      <div class="row" style="margin-top: 1em;">
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 1em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Introduction</p>
           <p class="lead text-center" style="font-size: 1em;">
          Recently Tesla has been in the news for upgrades to their electric car business and the CEO, Elon Musk, is known to be very active on the social media site, Twitter. He tweets frequently about Tesla, Inc., SpaceX missions as well as jokes. This sparked the question, which will also be the focus for my project; can a tweet with 280 characters influence the movement and momentum of the market of a Fortune 500 company. 
           </p>
         </div>
-        <div class="col-6 my-auto" >
-          <div class="card-center" style="margin-right:9em;">
-            <img src="intropic3.png" height="200px"; style="margin-left:5em;"class="card-img">
+        <div class="col-4 my-auto" >
+          <div class="card-center" >
+            <img src="intropic3.png" height="160px"; class="card-img">
           </div>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-           <div class="col-6 my-auto">
-          <div class="card-center">
-            <img src="phase1.png" class="card-img">
-          </div>
-        </div>
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 1</p>
           <p class="lead text-center"style="font-size: 1em;">
             To kickstart the project, I downloaded daily historical stock data from the past six months for Tesla into a CSV file from Yahoo! Finance<sup>1</sup>. By having the data in CSV format it can easily be imported into SQLiteStudio, a database manager I will be using to query the data collected and generate reports. I chose to only download data from the past six months as I felt it was a large enough time span to also have enough Twitter data. Also, six months would mean data from the beginning of 2019, which would be a fresh start for any plans Elon Musk has for Tesla in the upcoming year to be revealed through his tweets. 
           </p>
         </div>
+        <div class="col-4 my-auto">
+          <div class="card-center" >
+            <img src="phase1.png" height="140px"; class="card-img">
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 2</p>
           <p class="lead text-center"style="font-size: 1em;">
         The next phase of the inquiry involved categorizing Elon Musk’s tweets and retweets into the categories of Number of Tweets Relevant to Tesla and Not Relevant to Tesla from the past six months. This classification would help with trying to find a correlation between tweeting and the movement of the stock market. Aftering tallying up the categories, I inputted the data for Dates, Relevant Tweets about Tesla, Not Relevant to Tesla and Total Tweets into an excel document and then saved it as a CSV file. 
           </p>
         </div>
-        <div class="col-6 my-auto" >
+        <div class="col-4 my-auto" >
           <div class="card-center">
-            <img src="phase2.png" height = "190px"; style="margin-bottom: 2em;" class="card-img" >
+            <img src="phase2.png" height = "180px"; class="card-img" >
           </div>
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-6 my-auto">
-          <div class="card-center">
-            <img src="phase3.png" height="250px" class="card-img">
-          </div>
-        </div>
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 3</p>
           <p class="lead text-center"style="font-size: 1em;">
         Following the Twitter data tally, I imported the data from the CSV files into a new SQLite database in SQLiteStudio. In order to find the days where there could be a strong correlation I decided to use a weighted formula. The formula I used was: [(0.3 * |Δ stock price|) + (0.7 * total tweets)]. The weighted formula consists of constants which place more weight on the number of tweets as it is more likely there was a day with significant stock movement but not enough importance was being placed on how active he was on twitter. The top results should have both significant movement in the stock market and twitter activity in order to be investigated further. A weighted formula seemed to work best to help satisfy the criteria for the top results.  
           </p>
         </div>
+        <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="phase3.png" height="250px" class="card-img">
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">  
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">  
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 4</p>
           <p class="lead text-center"style="font-size: 1em;">
           To find the top few results, I joined the two tables through an inner join on the common column; Date, which will display the columns selected based on the dates that are common in both tables. I performed the calculation through the query shown in Figure 1, and selected the columns; Date, Change in Stock Price and Total Tweets to be displayed alongside the values from the equation. Additionally, I filtered the query to display dates where the number of total tweets was greater than 3, which is the average number of tweets per day, to make the data results stronger or more viable? and so the change in stock price was greater than the average change of $0.04/day. I also ordered it to display the scores in descending order. From the report, shown in Figure 2, I chose the top 20 days, which is 50% of the data after filtering it, with the highest values to be analyzed further. 
@@ -106,14 +106,14 @@
           As seen in Figure 2, the dates with the highest scores have a significant number of tweets, that are higher than the average of 3 tweets/day, and a drastic change in the stock price as well.
           </p>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="fig1.png"class="card-img">
           </div>
         </div>
-         <div class="col-3 my-auto">
+         <div class="col-4 my-auto">
           <div class="card-center">
-            <img src="figure2.png" class="card-img">
+            <img src="FIGURE2.png" height="300px" class="card-img">
           </div>  
         </div> 
       </div>
@@ -121,30 +121,30 @@
 
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig3.png" class="card-img">
-          </div>
-        </div>
-        <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="figure4.png" class="card-img">
-          </div>
-        </div>
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 5</p>
           <p class="lead text-center"style="font-size: 1em;">
 
           After finding out the dates with the top scores, I studied the data further by looking at the ratio of relevant to not relevant tweets about Tesla on the top 5 days. This helped determine whether the context of what Elon Musk is tweeting about had an influence on the movement of the stock. I executed a query, shown in Figure 3, to display the number of relevant and not relevant tweets about Tesla on the top 5 scoring days. The query report, shown in Figure 4, shows the breakdown of what Elon Musk is tweeting about alongside the change in the stock price.
           </p>
         </div>
+        <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig3.png" class="card-img">
+          </div>
+        </div>
+        <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="figure4.png" class="card-img">
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 6</p>
           <p class="lead text-center"style="font-size: 1em;">
           To dig deeper into this inquiry, I wanted to find at least 5 days out of the top 20 that showed tweeting having an effect on the movement of the stock price to see if a pattern existed to form a conclusion. I conducted a twitter sentiment analysis on the tweets and retweets for the top 20 scoring days to see if there were at least 5 days with a correlation. By categorizing the mood of the tweets or retweets about Tesla in the categories of; positive, negative and neutral I tried to find a correlation to the direction of the change in the stock price. The article, “Twitter Sentiment analysis using fastText” by Sanket Doshi<sup>2</sup>, provided me with the categories to place the sentiment present in the tweets or retweets by Elon Musk. I recorded the data in an excel document and downloaded it as a CSV file. After importing the data into the project's sql database, I joined the sentiment table with the previous two tables, as shown in Figure 5, to generate the report shown in Figure 6. </br> </br>
@@ -154,12 +154,12 @@
           I then decided to take a deeper look into the tweets that could have had an influence on the movement of the stock price.
           </p>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="fig5.png" class="card-img">
           </div>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="figure6.png" class="card-img">
           </div>
@@ -168,18 +168,8 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig7.png" class="card-img">
-          </div>
-        </div>
-         <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig8.png" class="card-img">
-          </div>
-        </div>
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;"> Day 1 of 5</p>
           <p class="lead text-center"style="font-size: 1em;">
             <U>Inside look on the tweets for the 5 days: </U>
@@ -187,24 +177,34 @@
             On April 23, 2019, Elon Musk was tweeting about the new Tesla Model S upgrades quite a lot and a video which showed the depth of information the Tesla cameras can collect. This might have caused the stock to rise.
           </p>
         </div>
+        <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig7.png" class="card-img">
+          </div>
+        </div>
+         <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig8.png" class="card-img">
+          </div>
+        </div>
       </div>
     </div>
 
 
  <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Day 2 of 5</p>
           <p class="lead text-center"style="font-size: 1em;">
           On January 7, 2019, Elon Musk retweeted a thread about an article by Tom Randall, a writer at Bloomberg, which talked about Tesla, Inc.’s cash flows increasing drastically and Model 3 bringing in the most revenue recorded in history in the U.S. This article shined a light on Tesla’s improvements and how U.S. citizens have increased their purchases of electric cars by Tesla.
           </p>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="fig9.png" class="card-img">
           </div>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="fig10.png" class="card-img">
           </div>
@@ -213,42 +213,41 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig11.png" class="card-img">
-          </div>
-        </div>
-         <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig12.png" class="card-img">
-          </div>
-        </div>
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;"> Day 3 of 5</p>
           <p class="lead text-center"style="font-size: 1em;">
             On January 10, 2019, Elon Musk retweeted a tweet about Tesla’s car loyalty and tweeted about how safe Tesla is.
           </p>
         </div>
-        
+        <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig11.png" class="card-img">
+          </div>
+        </div>
+         <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig12.png" class="card-img">
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
 
-        <div class="col-6 my-auto">
+    <div class="container-fluid">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Day 4 of 5</p>
           <p class="lead text-center"style="font-size: 1em;">
           On May 31, 2019, Elon Musk retweeted a tweet about how Tesla’s in car cameras helped the police catch a felon. It caught the eye of many twitter accounts as seen from the 16,000 favourites. He also tweeted the link to an article written on drivetest.com which touched on how the Model 3 performance is stellar. 
           </p>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="fig13.png" class="card-img">
           </div>
         </div>
-        <div class="col-3 my-auto">
+        <div class="col-4 my-auto">
           <div class="card-center">
             <img src="fig14.png" class="card-img">
           </div>
@@ -257,18 +256,8 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig15.png" class="card-img">
-          </div>
-        </div>
-         <div class="col-3 my-auto">
-          <div class="card-center">
-            <img src="fig16.png" class="card-img">
-          </div>
-        </div>
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;"> Day 5 of 5</p>
           <p class="lead text-center"style="font-size: 1em;">
           On April 22, 2019, Elon Musk  tweeted a link to a video which was about a car in auto-pilot mode. The tweet did not receive a lot of positive replies, one of which caught my eye. Tianqi Zhang mentioned an incident of a parked Tesla exploding that very same day, in an underground parking lot in Shanghai, China. 
@@ -276,19 +265,30 @@
           The explosion was reported by many well known news publishers such as The Washington Post, CNBC and The Guardian as well which caused an uproar about Tesla’s cars around the world, as shown by Youp De Boer’s reply in Figure 16 above. It could have easily influenced the drop in the stock market that day.
           </p>
         </div>
+           <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig15.png" class="card-img">
+          </div>
+        </div>
+         <div class="col-4 my-auto">
+          <div class="card-center">
+            <img src="fig16.png" class="card-img">
+          </div>
+        </div>
       </div>
     </div>
 
+
     <div class="container-fluid">
-      <div class="row" style="margin-top: 2em;">
-        <div class="col-6 my-auto">
+      <div class="row justify-content-center" style="margin-top: 2em;">
+        <div class="col-12 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Conclusion</p>
           <p class="lead text-center" style="font-size: 1em;">
           To conclude this inquiry, on the days where the stock price rose there was a significant amount of positive tweets about Tesla such as about upgrades to Model S, safety or brand loyalty. On the days where the stock price fell, such as on April 22, 2019, the tweets about Tesla were not always positive or have positive replies, as seen by Tianqi Zhang drawing attention to the fateful car explosion. This leads me to conclude that tweeting can have an influence on the movement of the stock market.
           </p>
         </div>
-        <div class="col-6 my-auto">
-          <div class="card-center"> <!style="margin-right: 5em; margin-left: 6.5em" ->
+        <div class="col-4 my-auto">
+          <div class="card-center"> 
             <img src="conc.png" height="250px" class="card-img">
           </div>
         </div>
