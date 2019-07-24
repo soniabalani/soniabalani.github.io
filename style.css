@@ -4,21 +4,14 @@ body {
 }
 
 @font-face {
-  font-family: OswaldM;
-  src: url(Oswald-Medium.ttf);
-}
-div.font {
-  font-family: OswaldM;
+  font-family: Helvetica;
+  src: url(Helvetica.ttf);
 }
 
-@font-face {
-  font-family: OswaldL;
-  src: url(Oswald-Light.ttf);
+div.font4 {
+  font-family: Helvetica;
 }
 
-div.font2 {
-  font-family: OswaldL;
-}
 
 @font-face {
   font-family: Merriweather;
@@ -28,25 +21,6 @@ div.font2 {
 div.font3 {
   font-family: Merriweather;
 }
-
-@font-face {
-  font-family: Helvetica;
-  src: url(Helvetica.ttf);
-}
-
-div.font4 {
-  font-family: Helvetica;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url(Roboto-light.ttf);
-}
-
-div.font5 {
-  font-family: Roboto;
-}
-
 
 header {
     display: flex;
