@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    margin-top: 0;
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url(Merriweather-Light.otf);
+}
+
+div.font {
+  font-family: Merriweather;
+}
+
+section {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+#home {
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1455612693675-112974d4880b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60.jpg');
+}
+
+#aboutme {
+    background-color: #eee;
+
+}
+
+#projects {
+    background-color: rgba(80, 80, 80, 0.15);;
+}
+
+#contact {
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://www.arabbank.com/images/default-source/default-album/contactusen.jpg?sfvrsn=9316569f_0.jpg');
+}
+
