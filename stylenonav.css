@@ -25,7 +25,7 @@ section {
 }
 
 #home {
-    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1455612693675-112974d4880b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60.jpg');
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://image.freepik.com/free-photo/flat-lay-working-space-office-desk-white-wood-table-background_29393-129.jpg');
 }
 
 #aboutme {
@@ -38,6 +38,6 @@ section {
 }
 
 #contact {
-    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://www.arabbank.com/images/default-source/default-album/contactusen.jpg?sfvrsn=9316569f_0.jpg');
+    background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://www.dentons.com/-/media/images/website/background-images/regions/united-states/us_regional_image_v7.jpg');
 }
 
