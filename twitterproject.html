@@ -58,11 +58,11 @@
         <div class="col-7 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Introduction</p>
           <p class="lead text-center" style="font-size: 1em;">
-         Recently Tesla has been in the news for upgrades to their electric car business and the CEO, Elon Musk, is known to be very active on the social media site, Twitter. He tweets frequently about Tesla, Inc., SpaceX missions as well as jokes. This sparked the question, which will also be the focus for my project; can a tweet with 280 characters influence the movement of a Fortune 500 company's stock price. 
+         Recently Tesla has been in the news for upgrades to their electric car business and the CEO, Elon Musk, is known to be very active on the social media site, Twitter. He tweets frequently about Tesla, Inc., SpaceX missions as well as jokes. This sparked the question, which will also be the focus for my project: can a tweet with 280 characters influence the movement of a Fortune 500 company's stock price. 
           </p> 
         <div class="col-6 my-auto" >
           <div class="card-center" >
-            <img src="intropic3.png" height="160px" class="card-img">
+            <img src="intropic.png" height="160px" class="card-img">
           </div>
         </div> 
       </div> 
@@ -74,7 +74,7 @@
         <div class="col-7 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 1 - Collecting Stock Price Data</p>
           <p class="lead text-center"style="font-size: 1em;">
-            To kickstart the project, I downloaded daily historical stock data from the past six months for Tesla into a CSV file from Yahoo! Finance<sup>1</sup>. By having the data in CSV format it can easily be imported into SQLiteStudio, a database manager I will be using to query the data collected and generate reports. I chose to only download data from the past six months as I felt it was a large enough time span to also have enough Twitter data. Also, six months would mean data from the beginning of 2019, which would be a fresh start for any plans Elon Musk has for Tesla in the upcoming year to be revealed through his tweets. 
+            To kickstart the project, I downloaded daily historical stock data from the past six months for Tesla into a CSV file from Yahoo! Finance<sup>1</sup>. By having the data in CSV format it can easily be imported into SQLiteStudio, a database manager I will be using to query the data collected and generate reports. I chose to only download data from the past six months as I felt it was a large enough time span to also have enough Twitter data. Also, six months would mean data from the beginning of 2019, which would be a fresh start for any plans Elon Musk has for Tesla in the upcoming year to be revealed through his tweets.<sup>4<sup>
           </p>
         <div class="col-6 my-auto">
           <div class="card-center" >
@@ -91,11 +91,12 @@
         <div class="col-7 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 2 - Categorizing Elon Musk's Tweets</p>
           <p class="lead text-center"style="font-size: 1em;">
-        The next phase of the inquiry involved categorizing Elon Musk’s tweets and retweets into the categories of Number of Tweets Relevant to Tesla and Not Relevant to Tesla from the past six months. This classification would help with trying to find a correlation between tweeting and the movement of the stock market. Aftering tallying up the categories, I inputted the data for; Dates, Relevant Tweets about Tesla, Not Relevant to Tesla and Total Tweets into an excel document and then saved it as a CSV file. 
+        The next phase of the inquiry involved categorizing Elon Musk’s tweets and retweets into the categories of Number of Tweets Relevant to Tesla and Not Relevant to Tesla from the past six months. This classification would help with trying to find a correlation between tweeting and the movement of the stock market. Aftering tallying up the categories, I inputted the data for: Dates, Relevant Tweets about Tesla, Not Relevant to Tesla and Total Tweets into an excel document, as shown in Figure 1, and then saved it as a CSV file.<sup>4<sup>
           </p>
-        <div class="col-6 my-auto" >
+        <div class="col-5 my-auto" >
           <div class="card-center">
-            <img src="phase2.png" height = "180px"; class="card-img" >
+            <div class="card text-center" style= "margin-bottom: 0em;">Figure 1: Recording Data</div>
+            <img src="fig1.png" height = "300px"; width = "110px" class="card-img" >
           </div>
         </div>
         </div>
@@ -112,7 +113,7 @@
         </p>
         <div class="col-6 my-auto">
           <div class="card-center">
-            <img src="phase3.png" height="200px" class="card-img">
+            <img src="weightedaverage.jpg" height="150px" class="card-img">
           </div>
         </div>
         </div>
@@ -124,21 +125,21 @@
         <div class="col-10 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 4 - Generating Reports</p>
           <p class="lead text-center"style="font-size: 1em; margin-bottom: 2.5em;">
-          To find the top few results, I joined the two tables through an inner join on the common column; Date, which would then display the data from the columns selected in the query based on the dates that are common in both tables. I performed the calculation through the query shown in Figure 1, and selected the columns; Date, Change in Stock Price and Total Tweets to be displayed alongside the values from the equation. Additionally, I calculated the average number of tweets per day and the average change in stock price per day to help narrow down the report generated. The filters I added made sure the report generated only included dates where the total number of tweets were greater than the average of 3 and the change in stock price was greater than the average of $0.04/day. This ensured a stronger and more condensed report making it easier to use the results for further analyzation. The query initially generated a report with 125 rows but was narrowed down to 40 rows after filters, shown in row 6 of Figure 1, were added to the query. I also ordered it to display the scores in descending order. From the report, shown in Figure 2, I chose the top 20 days, which is 50% of the data after filtering it, to be analyzed further. 
+          To find the top few results, I joined the two tables through an inner join on the common column Date, which would then display the data from the columns selected in the query based on the dates that are common in both tables. I performed the calculation through the query shown in Figure 1, and selected the columns: Date, Change in Stock Price and Total Tweets to be displayed alongside the values from the equation. Additionally, I calculated the average number of tweets per day and the average change in stock price per day to help narrow down the report generated. The filters I added made sure the report generated only included dates where the total number of tweets were greater than the average of 3 and the change in stock price was greater than the average of $0.04/day. This ensured a stronger and more condensed report making it easier to use the results for further analyzation. The query initially generated a report with 125 rows but was narrowed down to 40 rows after filters, shown in row 6 of Figure 2, were added to the query. I also ordered it to display the scores in descending order. From the report, shown in Figure 3, I chose the top 20 days, which is 50% of the data after filtering it, to be analyzed further. 
           <br><br>
-          As seen in Figure 2, the dates with the highest scores have a significant number of tweets, that are higher than the average of 3 tweets/day, and a drastic change in the stock price as well.
+          As seen in Figure 3, the dates with the highest scores have a significant number of tweets, that are higher than the average of 3 tweets/day, and a drastic change in the stock price as well.
           </p>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center" style= "margin-bottom: 0em;">Figure 1: SQL Code</div>
-            <img src="fig1.png"class="card-img">
+            <div class="card text-center" style= "margin-bottom: 0em;">Figure 2: SQL Code</div>
+            <img src="fig2.png"class="card-img">
           </div>
         </div>
          <div class="col-3 my-auto">
           <div class="card-center">
-            <div class="card text-center" style= "margin-bottom: 0em;">Figure 2: SQL Report</div>
-            <img src="FIGURE2.png" height="350px" class="card-img">
+            <div class="card text-center" style= "margin-bottom: 0em;">Figure 3: SQL Report</div>
+            <img src="fig3.png" height="350px" class="card-img">
           </div>  
         </div> 
       </div>
@@ -151,19 +152,19 @@
           <p class="text-center"style="font-size: 1.5em;">Phase 5 - Digging Deeper into Twitter Data</p>
           <p class="lead text-center"style="font-size: 1em; margin-bottom: 2.5em;">
 
-          After finding out the dates with the top scores, I studied the data further by looking at the ratio of relevant to not relevant tweets about Tesla on the top 20 days. This helped look into the context of what Elon Musk is tweeting about to see whether it had an influence on the movement of the stock price. I executed a query, shown in Figure 3, to display the number of relevant and not relevant tweets about Tesla on the top 20 scoring days. The query report, shown in Figure 4, shows the breakdown of what Elon Musk is tweeting about alongside the change in the stock price.
+          After finding out the dates with the top scores, I studied the data further by looking at the ratio of relevant to not relevant tweets about Tesla on the top 20 days. This helped look into the context of what Elon Musk is tweeting about to see whether it had an influence on the movement of the stock price. I executed a query, shown in Figure 4, to display the number of relevant and not relevant tweets about Tesla on the top 20 scoring days. The query report, shown in Figure 5, shows the breakdown of what Elon Musk is tweeting about alongside the change in the stock price.
           </p>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center" style= "margin-bottom: 0em;">Figure 3: SQL Code</div>
-            <img src="fig3.png" class="card-img">
+            <div class="card text-center" style= "margin-bottom: 0em;">Figure 4: SQL Code</div>
+            <img src="fig4.png" class="card-img">
           </div>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center" style= "margin-bottom: 0em;">Figure 4: SQL Report</div>
-            <img src="figure4.png" height="270px" class="card-img">
+            <div class="card text-center" style= "margin-bottom: 0em;">Figure 5: SQL Report</div>
+            <img src="fig5.png" height="270px" class="card-img">
           </div>
         </div>
       </div>
@@ -174,21 +175,21 @@
         <div class="col-10 my-auto">
           <p class="text-center"style="font-size: 1.5em;">Phase 6 - Twitter Sentiment Analysis</p>
           <p class="lead text-center"style="font-size: 1em; margin-bottom: 2.5em;">
-          To see if a pattern existed to form a conclusion, I wanted to find at least 5 days out of the top 20 that showed tweeting having an effect on the movement of the stock price. I conducted a twitter sentiment analysis on the tweets and retweets for the top 20 scoring days to see if there were at least 5 days with a correlation. By categorizing the mood of the tweets or retweets about Tesla in the categories of; positive, negative and neutral I tried to find a correlation to the direction of the change in the stock price. The article, “Twitter Sentiment analysis using fastText” by Sanket Doshi<sup>2</sup>, provided me with the categories to place the sentiment present in the tweets or retweets by Elon Musk. I recorded the data in an excel document and downloaded it as a CSV file. After importing the data into the project's database, I joined the sentiment table with the previous two tables, as shown in Figure 5, to generate the report shown in Figure 6. </br> </br>
+          To see if a pattern existed to form a conclusion, I wanted to find at least 5 days out of the top 20 that showed tweeting having an effect on the movement of the stock price. I conducted a twitter sentiment analysis on the tweets and retweets for the top 20 scoring days to see if there were at least 5 days with a correlation. By categorizing the mood of the tweets or retweets about Tesla in the categories of: positive, negative and neutral I tried to find a correlation to the direction of the change in the stock price. The article, “Twitter Sentiment analysis using fastText” by Sanket Doshi<sup>2</sup>, provided me with the categories to place the sentiment present in the tweets or retweets by Elon Musk. I recorded the data in an excel document and downloaded it as a CSV file.<sup>4</sup> After importing the data into the project's database, I joined the sentiment table with the previous two tables, as shown in Figure 6, to generate the report shown in Figure 7. </br> </br>
 
           The report in Figure 6 displays the change in the stock price alongside the number of positive, negative or neutral tweets about Tesla on the top 20 scoring days. Through this report we can see that on the dates April 23, 2019, January 7, 2019, January 10, 2019, May 31, 2019, and April 22, 2019 Elon Musk could have tweeted or retweeted something to influence the movement of the stock. I then decided to take a deeper look into the tweets that could have had an influence on the movement of the stock price on those 5 days.
           </p>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 5: SQL Code</div>
-            <img src="fig5.png" class="card-img">
+            <div class="card text-center">Figure 6: SQL Code</div>
+            <img src="fig6.png" class="card-img">
           </div>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 6: SQL Report</div>
-            <img src="figure6.png" height="295px" class="card-img">
+            <div class="card text-center">Figure 7: SQL Report</div>
+            <img src="fig7.png" height="295px" class="card-img">
           </div>
         </div>
       </div>
@@ -206,14 +207,14 @@
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 7</div>
-            <img src="fig7.png" class="card-img">
+            <div class="card text-center">Figure 8</div>
+            <img src="fig8.png" class="card-img">
           </div>
         </div>
          <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 8</div>
-            <img src="fig8.png" class="card-img">
+            <div class="card text-center">Figure 9</div>
+            <img src="fig9.png" class="card-img">
           </div>
         </div>
       </div>
@@ -230,14 +231,14 @@
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 9</div>
-            <img src="fig9.png" class="card-img">
+            <div class="card text-center">Figure 10</div>
+            <img src="fig10.png" class="card-img">
           </div>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 10</div>
-            <img src="fig10.png" class="card-img">
+            <div class="card text-center">Figure 11</div>
+            <img src="fig11.png" class="card-img">
           </div>
         </div>
       </div>
@@ -253,14 +254,14 @@
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 11</div>
-            <img src="fig11.png" class="card-img">
+            <div class="card text-center">Figure 12</div>
+            <img src="fig12.png" class="card-img">
           </div>
         </div>
          <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 12</div>
-            <img src="fig12.png" class="card-img">
+            <div class="card text-center">Figure 13</div>
+            <img src="fig13.png" class="card-img">
           </div>
         </div>
       </div>
@@ -277,14 +278,14 @@
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 13</div>
-            <img src="fig13.png" class="card-img">
+            <div class="card text-center">Figure 14</div>
+            <img src="fig14.png" class="card-img">
           </div>
         </div>
         <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 14</div>
-            <img src="fig14.png" class="card-img">
+            <div class="card text-center">Figure 15</div>
+            <img src="fig15.png" class="card-img">
           </div>
         </div>
       </div>
@@ -297,19 +298,19 @@
           <p class="lead text-center"style="font-size: 1em;">
           On April 22, 2019, Elon Musk tweeted a link to a video which was about a car in auto-pilot mode. The tweet did not receive a lot of positive replies, one of which caught my eye. Tianqi Zhang mentioned an incident of a parked Tesla exploding that very same day, in an underground parking lot in Shanghai, China. 
           <br><br>
-          The explosion was reported by many well known news publishers such as The Washington Post, CNBC and The Guardian as well which caused an uproar about Tesla’s cars around the world, as shown by Youp De Boer’s reply in Figure 16 below. It could have influenced the drop in the stock market that day.
+          The explosion was reported by many well known news publishers such as The Washington Post, CNBC and The Guardian as well which caused an uproar about Tesla’s cars around the world, as shown by Youp De Boer’s reply in Figure 17 below. It could have influenced the drop in the stock market that day.
           </p>
         </div>
            <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 15</div>
-            <img src="fig15.png" class="card-img">
+            <div class="card text-center">Figure 16</div>
+            <img src="fig16.png" class="card-img">
           </div>
         </div>
          <div class="col-4 my-auto">
           <div class="card-center">
-            <div class="card text-center">Figure 16</div>
-            <img src="fig16.png" class="card-img">
+            <div class="card text-center">Figure 17</div>
+            <img src="fig17.png" class="card-img">
           </div>
         </div>
       </div>
@@ -325,7 +326,7 @@
           </p>
         <div class="col-6 my-auto">
           <div class="card-center"> 
-            <img src="conc.png" height="200px" class="card-img">
+            <img src="conclusion.png" height="200px" class="card-img">
           </div>
         </div>
         </div>
@@ -344,7 +345,9 @@
                  <sup> 2 </sup> Doshi, S. (2019, March 05). Twitter Sentiment Analysis using fastText - Towards Data Science. Retrieved from <A HREF = "https://towardsdatascience.com/twitter-sentiment-analysis-using-fasttext-9ccd04465597"> https://towardsdatascience.com/twitter-sentiment-analysis-using-fasttext-9ccd04465597 </A> 
               <br>
                 <sup> 3 </sup> Goh, B., & Sun, Y. (2019, April 22). Tesla investigating video appearing to show Model S bursting into flames. Retrieved from <A HREF = "https://globalnews.ca/news/5190988/tesla-fire-video/"> https://globalnews.ca/news/5190988/tesla-fire-video/ </A> 
-                </p>          
+              <br>
+                <sup> 4 </sup> Data Files: <A HREF = "https://github.com/soniabalani/soniabalani.github.io/tree/master/Data"> Github </A> 
+                </p>              
         </div>
       </div>
     </div>
