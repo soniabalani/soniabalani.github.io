@@ -4,7 +4,6 @@
         <title>Sonia Balani</title>
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
           </script>
@@ -17,9 +16,9 @@
         
         <style> 
               .bg-home { 
-                background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://image.freepik.com/free-photo/flat-lay-working-space-office-desk-white-wood-table-background_29393-129.jpg') ; 
-                height: 100vh;
-
+                background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url('homebg.jpg') ; 
+                min-height: 100vh;
+                max-height:auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;    
@@ -32,8 +31,10 @@
         <style>
                 .bg-aboutme { 
                 background-color: #eee; 
-                height: 100vh;
-
+                min-height: 100vh;
+                max-height: auto;
+                padding-bottom: 2em;
+                padding-top: 2em;
                 display: flex;
                 justify-content: center;
                 align-items: center;    
@@ -46,8 +47,8 @@
         <style>
                 .bg-projects { 
                 background-color: rgba(80, 80, 80, 0.15);;                
-                height: 100vh;
-
+                min-height: 100vh;
+                max-height:auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;    
@@ -60,8 +61,8 @@
         <style>
               .bg-contact { 
                 background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://www.dentons.com/-/media/images/website/background-images/regions/united-states/us_regional_image_v7.jpg');
-                height: 100vh;
-
+                min-height: 100vh;
+                max-height:auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;    
@@ -86,7 +87,7 @@
   <header>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
       <a class="navbar-brand" href="#">Sonia Balani</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
@@ -126,7 +127,7 @@
                 <div class="section-inner">
                     <div class="container-fluid bg-home text-center">
                       <div class="row justify-content-center">
-                        <div class="col-12 my-auto">
+                        <div class="col-md-12 my-auto">
                            <p class="text-center" style="font-size: 3.7em;"> SONIA BALANI</p>
                             <p class="text-center" style="font-size: 1em; "> University of Waterloo, <p> 
                             <p class="text-center" style="font-size: 1em; "> <I>Accounting and Financial Management 2B <p> </I>
@@ -142,15 +143,15 @@
                 <div class="section-inner">
                    <div class="container-fluid bg-aboutme text-center">
                       <div class= "row justify-content-center">
-                        <div class="col-4 my-auto">
+                        <div class="col-md-4 my-auto">
                           <p class="text-left"style="font-size: 1.5em;">About Me</p>
                           <p class="lead text-left"style="font-size: 1em;">
                            I'm a hardworking, driven individual seeking opportunities for the Fall 2020 term. <br> <br> Currently, I am working as a Financial Accounting Co-op Student at the Office of the Superintendent of Financial Institutions. During my term, I have had the opportunity to develop my financial analysis and reporting skills. <br> <br> I have completed the following courses: Data-driven Decision Making and Problem Solving with Excel offered by PwC and Accounting Analytics offered by the Wharton School of the University of Pennsylvania on Coursera. <br> <br> Some courses I have completed so far at Waterloo include: Intermediate Financial Accounting I, Managerial Finance I and Introduction to Public Practice (Audit and Tax).
                           </p>
                         </div>
-                        <div class="col-4 my-auto">
+                        <div class="col-md-4 my-auto">
                           <div class="card-center" >
-                            <img src="aboutmepic.jpg" style= "margin-left: 2em; width: 100%;" class="card-img">
+                            <img src="aboutmepic.jpg" class="card-img">
                           </div>
                         </div>
                       </div>
@@ -162,49 +163,49 @@
 
             <section id="projects">
                 <div class="section-inner">
-                    <div class="container-fluid bg-projects text-center">
-                      <div class="row justify-content-center" >
-                        <div class="col-4 my-auto">
-                          <p class="text-left"style="font-size: 1.5em;">Projects</p>
-                          <p class="lead text-left"style="font-size: 1em;">
+                  <div class="container-fluid bg-projects text-center">
+                    <div class="row justify-content-center" >
+                      <div class="col-md-4 my-auto">
+                        <p class="text-left"style="font-size: 1.5em;">Projects</p>
+                        <p class="lead text-left"style="font-size: 1em;">
                         CAN A SINGLE TWEET INFLUENCE THE PRICE OF A FORTUNE 500 COMPANY'S STOCK? <br><br>
                         I did a deep dive into whether Elon Musk, one of Silicon Valley's enigmatic CEO's, can single handedly drive movement in his company, Tesla's, stock. Using Excel, SQL and fundamental analytics I took a close look at 6 months worth of tweets by Elon Musk and the effect they had on Tesla's stock price. <br><br>
                         <a href="twitterproject.html">Tweeting Drives the Stock Market ft. Elon Musk and Tesla</a> 
                         <IMG SRC="twitterbird.png"HEIGHT= "25" WIDTH= "31"> 
                         </p>
-                        </div>
-                        <div class="col-4 my-auto">
-                          <div class="card-center" >
-                            <img src="projectspic.jpg"style= "margin-left: 2em;" class="card-img">
-                          </div>
+                      </div>
+                      <div class="col-md-4 my-auto">
+                        <div class="card-center" >
+                          <img src="projectspic.jpg" class="card-img">
                         </div>
                       </div>
                     </div>
-                    <div style="clear:both;"></div>
+                  </div>
+                  <div style="clear:both;"></div>
                 </div>
             </section>
 
             <section id="contact">
                 <div class="section-inner">
-                    <div class="container-fluid bg-contact text-center">
-                      <div class="row justify-content-center" >
-                        <div class="col-12 my-auto">
-                          <p class="text-center"style="font-size: 1.5em;">Contact Info</p>
-                          <p class="lead text-center"style="font-size: 1em;">
-                           You can find me on: <br>
-                           <a href="https://www.linkedin.com/in/sonia-balani-91247516a">LinkedIn</a> &ensp;or&ensp; 
-                           <a href="https://www.github.com/soniabalani">Github</a> 
-                          </p>
-                        </div>
-                        <div class="col-12 my-auto justify-content-center">
-                          <div class="card-center justify-content-center"> <center>
-                            <a href="https://www.linkedin.com/in/sonia-balani-91247516a"><img src="linkedin.png" alt="linkedin" style="width: 7.4%;" class="card-img"> </a> &ensp;&ensp;&ensp;
-                            <a href="https://www.github.com/soniabalani"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="github" style="width: 7.1%;" class="card-img"></a> <center>
-                          </div>
+                  <div class="container-fluid bg-contact text-center">
+                    <div class="row justify-content-center" >
+                      <div class="col-md-12 my-auto">
+                        <p class="text-center"style="font-size: 1.5em;">Contact Info</p>
+                        <p class="lead text-center"style="font-size: 1em;">
+                          You can find me on: <br>
+                          <a href="https://www.linkedin.com/in/sonia-balani-91247516a">LinkedIn</a> &ensp;or&ensp; 
+                          <a href="https://www.github.com/soniabalani">Github</a> 
+                        </p>
+                      </div>
+                      <div class="col-md-12 my-auto justify-content-center">
+                        <div class="card-center justify-content-center"> <center>
+                          <a href="https://www.linkedin.com/in/sonia-balani-91247516a"><img src="linkedin.png" alt="linkedin" style="width: 7.4%;" class="card-img"> </a> &ensp;&ensp;&ensp;
+                          <a href="https://www.github.com/soniabalani"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="github" style="width: 7.1%;" class="card-img"></a> <center>
                         </div>
                       </div>
                     </div>
-                    <div style="clear:both;"></div>
+                  </div>
+                  <div style="clear:both;"></div>
                 </div>
             </section>
 
